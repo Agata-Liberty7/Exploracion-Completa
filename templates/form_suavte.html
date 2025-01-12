@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans %}Exploración de Articulaciones{% endtrans %}</title>
+</head>
+<body>
+    <h1>{% trans %}Exploración de Articulaciones: {{ joint_name }}{% endtrans %}</h1>
+    <form method="POST">
+        <label for="lado">{% trans %}Lado:{% endtrans %}</label>
+        <select name="lado" id="lado">
+            <option value="Izquierda">{% trans %}Izquierda{% endtrans %}</option>
+            <option value="Derecha">{% trans %}Derecha{% endtrans %}</option>
+        </select><br>
+
+        <label for="dolor">{% trans %}Dolor:{% endtrans %}</label>
+        <select name="dolor" id="dolor">
+            <option value="Нет">{% trans %}No{% endtrans %}</option>
+            <option value="Незначительная">{% trans %}Moderado{% endtrans %}</option>
+            <option value="Сильная">{% trans %}Severo{% endtrans %}</option>
+        </select><br>
+
+        <label for="rotacion">{% trans %}Rotación:{% endtrans %}</label>
+        <select name="rotacion" id="rotacion">
+            <option value="Libre">{% trans %}Libre{% endtrans %}</option>
+            <option value="Restringida">{% trans %}Restringida{% endtrans %}</option>
+            <option value="Bole">{% trans %}Dolor al mover{% endtrans %}</option>
+        </select><br>
+
+        <label for="krepitacion">{% trans %}Crecimiento (crujido):{% endtrans %}</label>
+        <select name="krepitacion" id="krepitacion">
+            <option value="Нет">{% trans %}No{% endtrans %}</option>
+            <option value="Присутствует">{% trans %}Presente{% endtrans %}</option>
+        </select><br>
+
+        <button type="submit">{% trans %}Siguiente{% endtrans %}</button>
+    </form>
+</body>
+</html>
