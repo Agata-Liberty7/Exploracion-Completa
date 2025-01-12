@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans %}Resultados{% endtrans %}</title>
+</head>
+<body>
+    <h1>{% trans %}Resultados de la exploración{% endtrans %}</h1>
+
+    <h2>{% trans %}Hipótesis diagnóstica:{% endtrans %}</h2>
+    <ul>
+        {% for item in hipotesis %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>{% trans %}Recomendaciones terapéuticas:{% endtrans %}</h2>
+    <ul>
+        {% for item in recomendaciones %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <form method="POST" action="{{ url_for('generate_pdf') }}">
+        <button type="submit">{% trans %}Descargar PDF{% endtrans %}</button>
+    </form>
+
+    <a href="{{ url_for('index') }}">{% trans %}Volver al inicio{% endtrans %}</a>
+</body>
+</html>
