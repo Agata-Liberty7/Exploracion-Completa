@@ -49,6 +49,14 @@ def suavte():
         return redirect(url_for('columna', **datos_suavte))
     return render_template('form_suavte.html')
 
+@app.route('/suavte/hip', methods=['GET', 'POST'])
+def suavte_hip():
+    if request.method == 'POST':
+        datos_hip = request.form.to_dict()
+        # Сохраняем данные тазобедренного сустава и переходим к следующему суставу
+        return redirect(url_for('suavte', **datos_hip))
+    return render_template('form_suavte_hip.html')
+
 @app.route('/columna', methods=['GET', 'POST'])
 def columna():
     if request.method == 'POST':
