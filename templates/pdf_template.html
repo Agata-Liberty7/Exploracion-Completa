@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans %}PDF Report{% endtrans %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #333;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>{% trans %}Resultados de la exploración{% endtrans %}</h1>
+
+    <h2>{% trans %}Hipótesis diagnóstica:{% endtrans %}</h2>
+    <ul>
+        {% for item in hipotesis %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>{% trans %}Recomendaciones terapéuticas:{% endtrans %}</h2>
+    <ul>
+        {% for item in recomendaciones %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
