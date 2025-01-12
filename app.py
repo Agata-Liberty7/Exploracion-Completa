@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for, send_file, flash
-from flask_babel import Babel, _
 from weasyprint import HTML
 import io
 from diagnostico import generar_diagnostico
