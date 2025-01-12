@@ -9,14 +9,6 @@ from validacion import validar_datos
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'  # Для flash-сообщений
 
-# Настройки мультиязычности
-app.config['BABEL_DEFAULT_LOCALE'] = 'ru'
-app.config['BABEL_SUPPORTED_LOCALES'] = ['ru', 'es', 'en']
-app.config['BABEL_TRANSLATION_DIRECTORIES'] = './translations'
-
-babel = Babel(app)
-
-@babel.localeselector
 def get_locale():
     return request.args.get('lang') or 'ru'
 
