@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans %}Exploración de la Columna Vertebral{% endtrans %}</title>
+</head>
+<body>
+    <h1>{% trans %}Exploración de la Columna Vertebral: {{ seccion_nombre }}{% endtrans %}</h1>
+    <form method="POST">
+        <label for="zona">{% trans %}Zona:{% endtrans %}</label>
+        <select name="zona" id="zona">
+            <option value="C1-C3">{% trans %}C1-C3{% endtrans %}</option>
+            <option value="T1-T4">{% trans %}T1-T4{% endtrans %}</option>
+            <option value="L1-L3">{% trans %}L1-L3{% endtrans %}</option>
+        </select><br>
+
+        <label for="b_palpacion">{% trans %}Dolor a la palpación:{% endtrans %}</label>
+        <select name="b_palpacion" id="b_palpacion">
+            <option value="Нет">{% trans %}No{% endtrans %}</option>
+            <option value="Незначительная">{% trans %}Moderado{% endtrans %}</option>
+            <option value="Сильная">{% trans %}Severo{% endtrans %}</option>
+        </select><br>
+
+        <label for="skovannost">{% trans %}Rigidez:{% endtrans %}</label>
+        <select name="skovannost" id="skovannost">
+            <option value="Нет">{% trans %}No{% endtrans %}</option>
+            <option value="Присутствует">{% trans %}Presente{% endtrans %}</option>
+        </select><br>
+
+        <button type="submit">{% trans %}Siguiente{% endtrans %}</button>
+    </form>
+</body>
+</html>
