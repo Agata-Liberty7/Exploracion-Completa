@@ -12,7 +12,7 @@ def generar_diagnostico(datos):
         hipotesis.append("Ограничение движений и крепитация могут быть признаком артроза.")
 
     if datos.get('ugol_norberg') == '<90°':
-        hipotesis.append("Угол Норберга менее 90° подтверждает дисплазию тазобедренного сустава.")
+    hipotesis.append(_("Угол Норберга менее 90° подтверждает дисплазию тазобедренного сустава."))
 
     if not hipotesis:
         hipotesis.append("Патологий не выявлено.")
