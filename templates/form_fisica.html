@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans %}Exploración Física{% endtrans %}</title>
+</head>
+<body>
+    <h1>{% trans %}Exploración Física{% endtrans %}</h1>
+    <form method="POST">
+        <label for="simetria">{% trans %}Simetría del cuerpo:{% endtrans %}</label>
+        <select name="simetria" id="simetria">
+            <option value="Completa">{% trans %}Completa{% endtrans %}</option>
+            <option value="Parcial">{% trans %}Parcial{% endtrans %}</option>
+        </select><br>
+
+        <label for="dolor">{% trans %}Dolor al tacto:{% endtrans %}</label>
+        <select name="dolor" id="dolor">
+            <option value="Нет">{% trans %}No{% endtrans %}</option>
+            <option value="Сильная">{% trans %}Severa{% endtrans %}</option>
+        </select><br>
+
+        <label for="tonus">{% trans %}Tono muscular:{% endtrans %}</label>
+        <select name="tonus" id="tonus">
+            <option value="Normal">{% trans %}Normal{% endtrans %}</option>
+            <option value="Hipotonía">{% trans %}Hipotonía{% endtrans %}</option>
+            <option value="Hipertonía">{% trans %}Hipertonía{% endtrans %}</option>
+        </select><br>
+
+        <label for="movilidad">{% trans %}Movilidad:{% endtrans %}</label>
+        <select name="movilidad" id="movilidad">
+            <option value="Completa">{% trans %}Completa{% endtrans %}</option>
+            <option value="Limitada">{% trans %}Limitada{% endtrans %}</option>
+        </select><br>
+
+        <button type="submit">{% trans %}Siguiente{% endtrans %}</button>
+    </form>
+</body>
+</html>
